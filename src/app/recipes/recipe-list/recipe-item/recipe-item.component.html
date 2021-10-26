@@ -1,1 +1,17 @@
-<p>recipe-item works!</p>
+<a
+    href="#"
+    class="list-group-item d-flex align-items-center"
+    (click)="getRecipeDetails(recipeItem)"
+    >
+      <div>
+        <h4 class="list-group-item-heading">{{recipeItem.name}}</h4>
+        <p class="list-group-item-text">{{recipeItem.desc}}</p>
+      </div>
+      <div>
+        <img
+          [src]="recipeItem.imagePath"
+          alt="{{recipeItem.name}}"
+          class="img-responsive"
+          style="max-height: 50px">
+      </div>
+    </a>
